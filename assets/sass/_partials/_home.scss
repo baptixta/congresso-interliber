@@ -1,75 +1,12 @@
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     background: $background;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
-    scroll-behavior: smooth;
-}
-
-header {
-    align-items: center;
-    display: flex;
-    font: 1.4rem 'Trebuchet MS';
-    margin-top: 30px;
-}
-
-nav {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-
-    ul {
-        display: flex;
-        padding-right: 25px;
-    }
-
-    li {
-        align-items: flex-end;
-        color: $white;
-        cursor: pointer;
-        display: flex;
-        justify-content: flex-start;
-        letter-spacing: .7px;
-        list-style: none;
-        padding: 0px 22px;
-        position: relative;
-
-        &:last-child {
-            color: $green;
-        }
-
-        &:after {
-            background: $green;
-            content: '';
-            position: absolute;
-            margin-top: 7px;
-            height: 3px;
-            transition: all .4s ease;
-            width: 0;
-        }
-
-        &:hover:after {
-            transition: all .4s ease;
-            width: 20%; 
-        }
-    }
-
-    li a {
-        text-decoration: none;
-    }
-}
-
-.logo  {
-    border-radius: 3px;
-    width: 80px;
-    padding: 10px 0px 10px 30px;
-    transition: background .3s ease;
-
-    &:hover {
-        background: $green;
-        transition: background .3s ease;
-    }
 }
 
 .container {
@@ -80,6 +17,14 @@ nav {
 
     &.main {
         height: 100vh;
+
+        @include MQ($S) {
+            height: 95vh;
+        }
+    }
+
+    &.info {
+        padding-top: 30px;
     }
 
     &.convidados {
@@ -94,10 +39,18 @@ nav {
 
     &:first-child {
         margin-right: 270px;
+
+        @include MQ($S) {
+            margin-right: 130px;
+        }
     }
 
     &:last-child {
         margin-left: 350px;
+
+        @include MQ($S) {
+            margin-left: 220px;
+        }
     }
 }
 
@@ -106,9 +59,20 @@ nav {
     font: 6rem/10px 'Trebuchet MS';
     margin: 35px auto;
 
+    @include MQ($S) {
+        font: 4rem/10px 'Trebuchet MS';
+        margin: 25px auto;
+    }
+
     &.info {
         font: 3rem/10px 'Trebuchet MS';
         margin-left: 30%;
+
+        @include MQ($S) {
+            font: 2rem 'Trebuchet MS';
+            margin: 0 auto;
+            text-align: center;
+        }
     }
 }
 
@@ -128,6 +92,10 @@ nav {
     margin-bottom: 120px;
     width: 40%;
 
+    @include MQ($S) {
+        width: 80%;
+    }
+
     &.box {
         margin-bottom: 0;
         margin-top: 5px;
@@ -140,4 +108,8 @@ nav {
     margin-bottom: 50px;
     margin-top: 10px;
     padding: 0px 20px;
+
+    @include MQ($S) {
+        flex-direction: column;
+    }
 }

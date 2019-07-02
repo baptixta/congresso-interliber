@@ -1,10 +1,3 @@
-body {
-  background: #131313;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0;
-  scroll-behavior: smooth; }
-
 header {
   -webkit-box-align: center;
           align-items: center;
@@ -25,6 +18,23 @@ nav {
     display: -webkit-box;
     display: flex;
     padding-right: 25px; }
+    @media screen and (max-width: 768px) {
+      nav ul {
+        -webkit-box-align: center;
+                align-items: center;
+        display: -webkit-box;
+        display: flex;
+        padding-right: 25px; } }
+    @media screen and (max-width: 414px) {
+      nav ul {
+        -webkit-box-align: baseline;
+                align-items: baseline;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        padding-top: 290px; } }
   nav li {
     -webkit-box-align: end;
             align-items: flex-end;
@@ -37,7 +47,14 @@ nav {
     letter-spacing: .7px;
     list-style: none;
     padding: 0px 22px;
-    position: relative; }
+    position: relative;
+    -webkit-tap-highlight-color: transparent; }
+    @media screen and (max-width: 768px) {
+      nav li {
+        padding: 0px 20px; } }
+    @media screen and (max-width: 414px) {
+      nav li {
+        padding: 10px 0px; } }
     nav li:last-child {
       color: #b8d808; }
     nav li:after {
@@ -54,7 +71,11 @@ nav {
       transition: all .4s ease;
       width: 20%; }
   nav li a {
+    color: #f8f8f8;
     text-decoration: none; }
+
+.green {
+  color: #b8d808; }
 
 .logo {
   border-radius: 3px;
@@ -66,6 +87,46 @@ nav {
     background: #b8d808;
     -webkit-transition: background .3s ease;
     transition: background .3s ease; }
+    @media screen and (max-width: 768px) {
+      .logo:hover {
+        background: none; } }
+
+.menu-logo {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 50; }
+  .menu-logo.is-active {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+
+.menu-mobile {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+  @media screen and (max-width: 768px) {
+    .menu-mobile {
+      position: relative; } }
+  @media screen and (max-width: 414px) {
+    .menu-mobile {
+      background: #0e0e0ee8;
+      margin-left: -270px;
+      opacity: 0;
+      position: absolute;
+      width: 100%; } }
+  .menu-mobile.is-active {
+    margin-left: 0;
+    opacity: 1; }
+
+* {
+  scroll-behavior: smooth; }
+
+body {
+  background: #131313;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0; }
 
 .container {
   -webkit-box-align: center;
@@ -79,6 +140,11 @@ nav {
           justify-content: center; }
   .container.main {
     height: 100vh; }
+    @media screen and (max-width: 414px) {
+      .container.main {
+        height: 95vh; } }
+  .container.info {
+    padding-top: 30px; }
   .container.convidados {
     width: 100%;
     -webkit-box-orient: horizontal;
@@ -90,16 +156,31 @@ nav {
   font: 2.5rem/20px 'Trebuchet MS'; }
   .subtitle:first-child {
     margin-right: 270px; }
+    @media screen and (max-width: 414px) {
+      .subtitle:first-child {
+        margin-right: 130px; } }
   .subtitle:last-child {
     margin-left: 350px; }
+    @media screen and (max-width: 414px) {
+      .subtitle:last-child {
+        margin-left: 220px; } }
 
 .title {
   color: #b8d808;
   font: 6rem/10px 'Trebuchet MS';
   margin: 35px auto; }
+  @media screen and (max-width: 414px) {
+    .title {
+      font: 4rem/10px 'Trebuchet MS';
+      margin: 25px auto; } }
   .title.info {
     font: 3rem/10px 'Trebuchet MS';
     margin-left: 30%; }
+    @media screen and (max-width: 414px) {
+      .title.info {
+        font: 2rem 'Trebuchet MS';
+        margin: 0 auto;
+        text-align: center; } }
 
 .content {
   -webkit-box-align: center;
@@ -120,6 +201,9 @@ nav {
   letter-spacing: .5px;
   margin-bottom: 120px;
   width: 40%; }
+  @media screen and (max-width: 414px) {
+    .text {
+      width: 80%; } }
   .text.box {
     margin-bottom: 0;
     margin-top: 5px;
@@ -131,3 +215,8 @@ nav {
   margin-bottom: 50px;
   margin-top: 10px;
   padding: 0px 20px; }
+  @media screen and (max-width: 414px) {
+    .box {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column; } }
