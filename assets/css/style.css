@@ -150,9 +150,13 @@ strong {
     padding-top: 30px; }
   .container.convidados {
     width: 100%;
+    display: -webkit-box;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-            flex-direction: row; }
+            flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box; }
 
 @media screen and (max-width: 414px) {
   .main-title {
@@ -245,4 +249,10 @@ strong {
       padding: 0; } }
 
 .convidado {
-  width: 25%; }
+  -webkit-box-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+          justify-content: center; }
