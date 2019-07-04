@@ -197,6 +197,10 @@ strong {
   .title.info {
     font: 3rem/10px 'Trebuchet MS';
     margin-left: 30%; }
+    @media screen and (max-width: 768px) {
+      .title.info {
+        text-align: center;
+        margin: 35px auto; } }
     @media screen and (max-width: 414px) {
       .title.info {
         font: 2rem 'Trebuchet MS';
@@ -222,6 +226,9 @@ strong {
   letter-spacing: .5px;
   margin-bottom: 20px;
   width: 40%; }
+  @media screen and (max-width: 768px) {
+    .text {
+      width: 75%; } }
   @media screen and (max-width: 414px) {
     .text {
       width: 80%; }

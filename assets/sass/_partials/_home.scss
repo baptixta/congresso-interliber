@@ -95,6 +95,11 @@ strong {
         font: 3rem/10px 'Trebuchet MS';
         margin-left: 30%;
 
+        @include MQ($M) {
+            text-align: center;
+            margin: 35px auto;
+        }
+
         @include MQ($S) {
             font: 2rem 'Trebuchet MS';
             margin: 0 auto;
@@ -118,6 +123,10 @@ strong {
     letter-spacing: .5px;
     margin-bottom: 20px;
     width: 40%;
+
+    @include MQ($M) {
+        width: 75%;
+    }
 
     @include MQ($S) {
         width: 80%;
