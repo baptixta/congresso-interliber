@@ -9,6 +9,10 @@ body {
     padding: 0;
 }
 
+strong {
+    color: $green;
+}
+
 .container {
     align-items: center;
     display: flex;
@@ -105,7 +109,7 @@ body {
     color: $white;
     font: 1rem/28px 'Trebuchet MS';
     letter-spacing: .5px;
-    margin-bottom: 120px;
+    margin-bottom: 20px;
     width: 40%;
 
     @include MQ($S) {
@@ -141,5 +145,5 @@ body {
 }
 
 .convidado {
- 
+    width: 25%;
 }
