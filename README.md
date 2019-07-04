@@ -1,5 +1,5 @@
 # Congresso - Inter Liber
-> Site - Congresso | Inter Liber
+> site
 
 ---
 permalink: /index.html
