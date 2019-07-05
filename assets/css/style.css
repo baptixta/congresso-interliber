@@ -315,11 +315,4 @@ strong {
           justify-content: center; }
 
 figure {
-  margin: 20px 10px;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease; }
-  figure:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    -webkit-transition: all .4s ease;
-    transition: all .4s ease; }
+  margin: 20px 10px; }
