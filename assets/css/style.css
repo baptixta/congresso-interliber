@@ -358,6 +358,14 @@ strong {
   margin-left: 25px;
   width: 80%; }
 
+.short-bio-media {
+  -webkit-box-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: start;
+          justify-content: flex-start; }
+
 .social-media {
   -webkit-box-align: center;
           align-items: center;
