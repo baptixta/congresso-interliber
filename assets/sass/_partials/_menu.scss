@@ -86,7 +86,7 @@ nav {
     transition: background .3s ease;
 
     @include MQ($S) {
-        opacity: 0;
+        display: none;
     }
 
     &:hover {
@@ -103,7 +103,7 @@ nav {
     position: relative;
     transition: all .3s ease;
     -webkit-tap-highlight-color: transparent;
-    z-index: 50;
+    z-index: 10;
 
     @include MQ($S){
         border-top: 1px solid $white;
@@ -129,7 +129,7 @@ nav {
             height: 1px;
             position: absolute;
             width: 25px;
-            top: 10px;
+            top: 9px;
             transition: all .3s ease;
         }
     }
@@ -157,14 +157,13 @@ nav {
 
         &:after {
             opacity: 0;
-            transition: all .3s ease;
+            transition: all .5s ease;
         }
     }
 }
 
 .menu-mobile {
     transition: all .3s ease;
-    z-index: 10;
 
     @include MQ($M) {
         position: relative;
