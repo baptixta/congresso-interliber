@@ -83,6 +83,9 @@ nav {
   padding: 10px 0px 10px 30px;
   -webkit-transition: background .3s ease;
   transition: background .3s ease; }
+  @media screen and (max-width: 414px) {
+    .logo {
+      opacity: 0; } }
   .logo:hover {
     background: #b8d808;
     -webkit-transition: background .3s ease;
@@ -92,19 +95,69 @@ nav {
         background: none; } }
 
 .menu-logo {
+  position: relative;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   -webkit-tap-highlight-color: transparent;
   z-index: 50; }
+  @media screen and (max-width: 414px) {
+    .menu-logo {
+      border-top: 1px solid #f8f8f8;
+      height: 1px;
+      position: absolute;
+      width: 25px;
+      margin-left: 15px;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+      .menu-logo:before {
+        border-top: 1px solid #f8f8f8;
+        content: '';
+        height: 1px;
+        position: absolute;
+        width: 25px;
+        top: -10px;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease; }
+      .menu-logo:after {
+        border-top: 1px solid #f8f8f8;
+        content: '';
+        height: 1px;
+        position: absolute;
+        width: 25px;
+        top: 10px;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease; } }
   .menu-logo.is-active {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    border-top: 1px solid #f8f8f8;
+    height: 1px;
+    position: absolute;
+    width: 25px;
+    margin-left: 15px;
     -webkit-transition: all .3s ease;
-    transition: all .3s ease; }
+    transition: all .3s ease;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+    .menu-logo.is-active:before {
+      border-top: 1px solid #f8f8f8;
+      content: '';
+      height: 1px;
+      margin-top: 9px;
+      position: absolute;
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+      width: 25px;
+      top: -10px;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+    .menu-logo.is-active:after {
+      opacity: 0;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
 
 .menu-mobile {
   -webkit-transition: all .3s ease;
-  transition: all .3s ease; }
+  transition: all .3s ease;
+  z-index: 10; }
   @media screen and (max-width: 768px) {
     .menu-mobile {
       position: relative; } }
