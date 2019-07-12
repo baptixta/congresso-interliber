@@ -235,7 +235,7 @@ strong {
   .subtitle:last-child {
     margin-left: 350px; }
     @media screen and (max-width: 414px) {
-      .subtitle:last-child {
+      .subtitle:last-child:last-child {
         margin-left: 220px; } }
 
 .title {
@@ -325,38 +325,25 @@ strong {
   -webkit-tap-highlight-color: transparent; }
 
 .short-bio {
-  background: #0e0e0ee8;
-  bottom: -382px;
+  background: #0e0e0e7a;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
   height: 100%;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   position: absolute;
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
   width: 382px; }
-  .short-bio.is-active {
-    bottom: 0; }
 
 .short-bio-title {
   color: #b8d808;
   font: 1.6rem 'Trebuchet MS';
   margin-bottom: 10px;
   margin-left: 25px; }
-
-.short-bio-subtitle {
-  color: #b8d808;
-  font: 1rem 'Trebuchet MS';
-  margin-left: 25px;
-  margin-top: 0; }
-
-.short-bio-text {
-  color: #f8f8f8;
-  font: 1rem 'Trebuchet MS';
-  margin-left: 25px;
-  width: 80%; }
 
 .short-bio-media {
   -webkit-box-align: center;
