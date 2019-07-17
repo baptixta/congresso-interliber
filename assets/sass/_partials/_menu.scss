@@ -1,8 +1,16 @@
 header {
     align-items: center;
     display: flex;
-    font: 1.4rem 'Trebuchet MS';
-    margin-top: 30px;
+    font: 3rem 'Halfomania';
+    margin-top: 20px;
+
+    @include MQ($M) {
+        font-size: 2rem;
+    }
+
+    @include MQ($S) {
+        font-size: 2.8rem;
+    }
 }
 
 nav {
@@ -22,9 +30,10 @@ nav {
         }
 
         @include MQ($S) {
-            align-items: baseline;
+            align-items: flex-start;
             display: flex;
             flex-direction: column;
+            padding-right: 40px;
             padding-top: 290px;
         }
     }
@@ -163,6 +172,9 @@ nav {
 }
 
 .menu-mobile {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     transition: all .3s ease;
 
     @include MQ($M) {

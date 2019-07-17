@@ -3,8 +3,14 @@ header {
           align-items: center;
   display: -webkit-box;
   display: flex;
-  font: 1.4rem 'Trebuchet MS';
-  margin-top: 30px; }
+  font: 3rem 'Halfomania';
+  margin-top: 20px; }
+  @media screen and (max-width: 768px) {
+    header {
+      font-size: 2rem; } }
+  @media screen and (max-width: 414px) {
+    header {
+      font-size: 2.8rem; } }
 
 nav {
   -webkit-box-align: center;
@@ -27,13 +33,14 @@ nav {
         padding-right: 25px; } }
     @media screen and (max-width: 414px) {
       nav ul {
-        -webkit-box-align: baseline;
-                align-items: baseline;
+        -webkit-box-align: start;
+                align-items: flex-start;
         display: -webkit-box;
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
                 flex-direction: column;
+        padding-right: 40px;
         padding-top: 290px; } }
   nav li {
     -webkit-box-align: end;
@@ -155,6 +162,12 @@ nav {
       transition: all .5s ease; }
 
 .menu-mobile {
+  -webkit-box-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
   -webkit-transition: all .3s ease;
   transition: all .3s ease; }
   @media screen and (max-width: 768px) {
@@ -179,6 +192,10 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0; }
+
+@font-face {
+  font-family: Halfomania;
+  src: url(Halfomania-Regular.otf); }
 
 strong {
   color: #b8d808; }
@@ -221,7 +238,7 @@ strong {
 
 .clock {
   color: #b8d808;
-  font: 2.2rem 'Trebuchet MS'; }
+  font: 3.8rem 'Halfomania'; }
 
 .subtitle {
   color: #f8f8f8;
@@ -233,21 +250,21 @@ strong {
       .subtitle:first-child {
         margin-right: 130px; } }
   .subtitle:last-child {
-    margin-left: 350px; }
+    margin-left: 385px; }
     @media screen and (max-width: 414px) {
       .subtitle:last-child:last-child {
-        margin-left: 220px; } }
+        margin-left: 235px; } }
 
 .title {
   color: #b8d808;
-  font: 6rem/10px 'Trebuchet MS';
-  margin: 35px auto; }
+  font: 8.9rem/10px 'Halfomania';
+  margin: 50px auto; }
   @media screen and (max-width: 414px) {
     .title {
-      font: 4rem/10px 'Trebuchet MS';
+      font: 6rem/10px 'Halfomania';
       margin: 25px auto; } }
   .title.info {
-    font: 3rem/10px 'Trebuchet MS';
+    font: 5rem/10px 'Halfomania';
     margin-left: 30%; }
     @media screen and (max-width: 768px) {
       .title.info {
@@ -255,7 +272,7 @@ strong {
         margin: 35px auto; } }
     @media screen and (max-width: 414px) {
       .title.info {
-        font: 2rem 'Trebuchet MS';
+        font: 4rem 'Halfomania';
         margin: 0 auto;
         text-align: center; } }
 
@@ -298,7 +315,7 @@ strong {
   display: -webkit-box;
   display: flex;
   margin-bottom: 50px;
-  margin-top: 10px;
+  margin-top: 35px;
   padding: 0px 20px; }
   @media screen and (max-width: 414px) {
     .box {
@@ -308,6 +325,58 @@ strong {
       -webkit-box-direction: normal;
               flex-direction: column;
       padding: 0; } }
+
+details {
+  font: 1.4rem 'Trebuchet MS';
+  margin: 20px auto;
+  width: 40%; }
+  @media screen and (max-width: 768px) {
+    details {
+      width: 75%; } }
+  details :nth-child(1) {
+    margin-top: 30px; }
+
+details.animation[open] summary ~ * {
+  -webkit-animation: fade .5s ease;
+          animation: fade .5s ease; }
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+summary {
+  color: #f8f8f8;
+  cursor: pointer;
+  outline: none; }
+
+.programacao-item {
+  -webkit-box-align: center;
+          align-items: center;
+  color: #f8f8f8;
+  display: -webkit-box;
+  display: flex;
+  list-style: none;
+  padding: 15px 0px;
+  position: relative; }
+  .programacao-item:before {
+    background: #b8d808;
+    border-radius: 50%;
+    content: '';
+    height: 7px;
+    margin-left: -30px;
+    position: absolute;
+    width: 7px; }
+
+.highlight {
+  color: #b8d808; }
 
 .convidado {
   -webkit-box-align: center;
@@ -340,9 +409,9 @@ strong {
 
 .short-bio-title {
   color: #b8d808;
-  font: 1.6rem 'Trebuchet MS';
-  margin-bottom: 10px;
-  margin-left: 25px; }
+  font: 3rem 'Halfomania';
+  margin-left: 15px;
+  margin-top: 15px; }
 
 .short-bio-media {
   -webkit-box-align: center;

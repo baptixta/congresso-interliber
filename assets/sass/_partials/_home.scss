@@ -9,6 +9,11 @@ body {
     padding: 0;
 }
 
+@font-face {
+    font-family: Halfomania;
+    src: url(Halfomania-Regular.otf);   
+  }
+
 strong {
     color: $green;
 }
@@ -56,7 +61,7 @@ strong {
 
 .clock {
     color: $green;
-    font: 2.2rem 'Trebuchet MS';
+    font: 3.8rem 'Halfomania';
 }
 
 .subtitle {
@@ -73,11 +78,11 @@ strong {
     }
 
     &:last-child{
-        margin-left: 350px;
+        margin-left: 385px;
 
         &:last-child{
             @include MQ($S) {
-                margin-left: 220px;
+                margin-left: 235px;
             }            
         }
     }
@@ -85,16 +90,16 @@ strong {
 
 .title {
     color: $green;
-    font: 6rem/10px 'Trebuchet MS';
-    margin: 35px auto;
+    font: 8.9rem/10px 'Halfomania';
+    margin: 50px auto;
 
     @include MQ($S) {
-        font: 4rem/10px 'Trebuchet MS';
+        font: 6rem/10px 'Halfomania';
         margin: 25px auto;
     }
 
     &.info {
-        font: 3rem/10px 'Trebuchet MS';
+        font: 5rem/10px 'Halfomania';
         margin-left: 30%;
 
         @include MQ($M) {
@@ -103,7 +108,7 @@ strong {
         }
 
         @include MQ($S) {
-            font: 2rem 'Trebuchet MS';
+            font: 4rem 'Halfomania';
             margin: 0 auto;
             text-align: center;
         }
@@ -152,7 +157,7 @@ strong {
 .box {
     display: flex;
     margin-bottom: 50px;
-    margin-top: 10px;
+    margin-top: 35px;
     padding: 0px 20px;
 
     @include MQ($S) {
@@ -160,6 +165,60 @@ strong {
         flex-direction: column;
         padding: 0;
     }
+}
+
+// Programação
+
+details {
+    font: 1.4rem 'Trebuchet MS';
+    margin: 20px auto;
+    width: 40%;
+
+    @include MQ($M) {
+        width: 75%;
+    }
+
+    :nth-child(1) {
+        margin-top: 30px;
+    }
+}
+
+details.animation[open] summary ~ * {
+    animation: fade .5s ease;
+  }
+  
+  @keyframes fade {
+    0%    {opacity: 0;}
+    100%  {opacity: 1;}
+  }
+
+summary {
+    color: $white;
+    cursor: pointer;
+    outline: none;
+}
+
+.programacao-item {
+    align-items: center;
+            color: $white;
+            display: flex;
+            list-style: none;
+            padding: 15px 0px;
+            position: relative;
+    
+            &:before {
+                background: $green;
+                border-radius: 50%;
+                content: '';
+                height: 7px;
+                margin-left: -30px;
+                position: absolute;
+                width: 7px;
+            }
+}
+
+.highlight {
+    color: $green;
 }
 
 // Convidado
@@ -188,9 +247,9 @@ strong {
 
 .short-bio-title {
     color: $green;
-    font: 1.6rem 'Trebuchet MS';
-    margin-bottom: 10px;
-    margin-left: 25px;
+    font: 3rem 'Halfomania';
+    margin-left: 15px;
+    margin-top: 15px;
 }
 
 .short-bio-media {
@@ -212,5 +271,3 @@ strong {
 figure {
     margin: 20px 10px;
 }
-
-
