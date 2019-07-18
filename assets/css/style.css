@@ -239,8 +239,7 @@ strong {
     -webkit-box-direction: normal;
             flex-direction: column;
     -webkit-box-pack: center;
-            justify-content: center;
-    margin-top: -150px; } }
+            justify-content: center; } }
 
 .counter {
   margin-top: 40px; }
