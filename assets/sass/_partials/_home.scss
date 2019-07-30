@@ -51,7 +51,10 @@ strong {
 
 .main-title {
     @include MQ($S) {
-        margin-top: -150px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
@@ -73,7 +76,7 @@ strong {
         margin-right: 270px;
 
         @include MQ($S) {
-            margin-right: 130px;
+            margin: 20px auto; 
         }
     }
 
@@ -82,7 +85,7 @@ strong {
 
         &:last-child{
             @include MQ($S) {
-                margin-left: 235px;
+                margin: 20px auto; 
             }            
         }
     }
@@ -91,7 +94,7 @@ strong {
 .title {
     color: $green;
     font: 8.9rem/10px 'Halfomania';
-    margin: 50px auto;
+    margin: 30px auto;
 
     @include MQ($S) {
         font: 6rem/10px 'Halfomania';

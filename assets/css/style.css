@@ -231,7 +231,15 @@ strong {
 
 @media screen and (max-width: 414px) {
   .main-title {
-    margin-top: -150px; } }
+    -webkit-box-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center; } }
 
 .counter {
   margin-top: 40px; }
@@ -248,17 +256,17 @@ strong {
     margin-right: 270px; }
     @media screen and (max-width: 414px) {
       .subtitle:first-child {
-        margin-right: 130px; } }
+        margin: 20px auto; } }
   .subtitle:last-child {
     margin-left: 385px; }
     @media screen and (max-width: 414px) {
       .subtitle:last-child:last-child {
-        margin-left: 235px; } }
+        margin: 20px auto; } }
 
 .title {
   color: #b8d808;
   font: 8.9rem/10px 'Halfomania';
-  margin: 50px auto; }
+  margin: 30px auto; }
   @media screen and (max-width: 414px) {
     .title {
       font: 6rem/10px 'Halfomania';
