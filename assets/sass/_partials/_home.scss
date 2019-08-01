@@ -16,6 +16,11 @@ body {
 
 strong {
     color: $green;
+
+    a {
+        color: $green;
+        text-decoration: underline;
+    }
 }
 
 .container {
@@ -44,7 +49,7 @@ strong {
         width: 100%;
 
         &:last-child {
-            padding-bottom: 120px;
+            padding-bottom: 70px;
         }
     }
 }
@@ -269,6 +274,7 @@ summary {
     align-items: center;
     display: flex;
     justify-content: center;
+    padding-top: 50px;
 }
 
 figure {

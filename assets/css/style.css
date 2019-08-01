@@ -199,6 +199,9 @@ body {
 
 strong {
   color: #b8d808; }
+  strong a {
+    color: #b8d808;
+    text-decoration: underline; }
 
 .container {
   -webkit-box-align: center;
@@ -227,7 +230,7 @@ strong {
     flex-wrap: wrap;
     width: 100%; }
     .container.convidados:last-child {
-      padding-bottom: 120px; }
+      padding-bottom: 70px; }
 
 @media screen and (max-width: 414px) {
   .main-title {
@@ -438,7 +441,8 @@ summary {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  padding-top: 50px; }
 
 figure {
   margin: 20px 10px; }
